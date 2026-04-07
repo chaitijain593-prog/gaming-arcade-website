@@ -1,4 +1,2 @@
 # 🕹️ Arcade Zone
-
-A mini browser-based gaming hub — no installs, no signups. Just open and play.
-Welcome to **Arcade Zone**, a lightweight collection of classic games built with pure HTML, CSS, and JavaScript. Designed to be simple, fun, and instantly playable right in your browser.
+Arcade Zone brings the nostalgia of classic games right to your browser. Whether you're challenging a friend or testing your luck against the computer, there's something for everyone. No downloads, no sign-ups — just pure fun.
