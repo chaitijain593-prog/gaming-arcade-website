@@ -98,3 +98,34 @@ body {
 
 input { display: block; margin: 10px 0; padding: 10px; width: 250px; border-radius: 5px; border: none; }
 .gradient-text { background: linear-gradient(90deg, #7ddd6d, #ff00ea); background-clip: text; -webkit-text-fill-color: transparent; }
+
+.arcade-footer {
+    background-color: #0f0f0f;
+    color: #00ff41; /* "Matrix" green text */
+    padding: 30px 0;
+    margin-top: 50px;
+    border-top: 4px solid #3aad3e;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive, Arial; /* Pixel font if available */
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #54d326; 
+    text-shadow: 0 0 10px #ffffff;
+}
