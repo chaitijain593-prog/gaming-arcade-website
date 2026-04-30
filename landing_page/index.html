@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamify Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="showSection('home-section')">
+            <img src="Copilot_20260430_172546.png" height="200" alt="logo icon">
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="dropdown">
+                <button class="dropbtn">GAMES</button>
+                <div class="dropdown-content">
+                    <a href="../snake_game/index.html">Snake Game 2.0</a>
+                    <a href="../tic_tac_toe/index.html">Tic Tac Toe</a>
+                    <a href="../whack_a_mole/index.html">Whack a Mole</a>
+                    <a href="../rock_paper_scissor/index.html">Rock Paper Scissors</a>
+                    <a href="../memory_game/index.html">Memory Game</a>
+                </div>
+                </div>
+            </li>
+            <li onclick="showSection('leaderboard-section')">LEADERBOARD</li>
+            <li onclick="showSection('profile-section')">PROFILE</li>
+            <li onclick="showSection('help-section')">HELP</li>
+        </ul>
+        <button class="join-btn" onclick="showSection('auth-section')">JOIN</button>
+    </nav>
+
+    <div id="home-section" class="page-content">
+        <header class="hero">
+            <h1>IMMERSIVE <span class="gradient-text">ARCADE</span> FOR ALL</h1>
+            <p>The largest collection of retro and indie games, right in your browser.</p>
+        </header>
+
+        <main class="carousel-container">
+            <div class="carousel">
+                <div class="card side-left">
+                    <div class="card-content">
+                        <img src="https://via.placeholder.com/200x250?text=Tic+Tac+Toe" alt="Tic Tac Toe">
+                        <h3>TIC-TAC-TOE</h3>
+                        <span>MULTIPLAYER</span>
+                    </div>
+                </div>
+                <div class="card mid-left">
+                    <div class="card-content">
+                        <img src="https://via.placeholder.com/200x250?text=RPS" alt="Rock Paper Scissors">
+                        <h3>RPS CHALLENGE</h3>
+                        <span>STRATEGY</span>
+                    </div>
+                </div>
+                <div class="card center featured">
+                    <div class="card-content">
+                        <div class="badge">Game of the Week</div>
+                        <img src="https://via.placeholder.com/250x300?text=SNAKE+2.0" alt="Snake">
+                        <div class="info">
+                            <h2>SNAKE 2.0</h2>
+                            <p class="score">SCORE: 2,170 PTS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mid-right">
+                    <div class="card-content">
+                        <img src="https://via.placeholder.com/200x250?text=Whack+A+Mole" alt="Whack a mole">
+                        <h3>WHACK-A-MOLE</h3>
+                        <span>REFLEX</span>
+                    </div>
+                </div>
+                <div class="card side-right">
+                    <div class="card-content">
+                        <img src="https://via.placeholder.com/200x250?text=Memory" alt="Memory Game">
+                        <h3>MEMORY GAME</h3>
+                        <span>PUZZLE</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <section id="leaderboard-section" class="page-content hidden">
+        <h2 class="gradient-text">LEADERBOARDS</h2>
+        <div id="leaderboard-display" class="info-box"></div>
+    </section>
+
+    <section id="profile-section" class="page-content hidden">
+        <h2 class="gradient-text">YOUR PROFILE</h2>
+        <div id="profile-display" class="info-box"></div>
+        <button class="join-btn" onclick="logout()" style="margin-top:20px">LOGOUT</button>
+    </section>
+
+    <section id="auth-section" class="page-content hidden">
+        <div class="auth-box">
+            <h2 class="gradient-text">JOIN US</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <div style="margin-top:20px">
+                <button class="join-btn" onclick="signUp()">SIGN UP</button>
+                <button class="join-btn" onclick="login()">LOGIN</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="help-section" class="page-content hidden">
+        <h2 class="gradient-text">HELP CENTER</h2>
+        <div class="info-box">
+            <h3>FAQs</h3>
+            <p><strong>How to play?</strong> Choose a game from the 'GAMES' dropdown menu.</p>
+            <p><strong>Are scores saved?</strong> Yes, if you are logged in, your top 5 scores per game are kept.</p>
+            <p><strong>Helpdesk:</strong> Contact us at support@gamify.com</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
