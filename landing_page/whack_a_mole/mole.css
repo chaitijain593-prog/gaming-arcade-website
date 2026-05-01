@@ -1,8 +1,9 @@
 body {
     text-align: center;
-    background-color: #000000; 
-    color: #39FF14; 
+  
+    color: #030f00; 
     padding: 20px;
+     background: linear-gradient(90deg, #7ddd6d, #ff00ea);
 }
 
 #board {
@@ -12,8 +13,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: #050505; 
-    border: 3px solid #39FF14;
-    border-radius: 25px;
+   
+ 
 }
 
 #board div img {
