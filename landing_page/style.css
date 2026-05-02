@@ -1,15 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
 :root {
     --bg-dark: #0f1115;
     --accent-green: #39ff14;
     --text-white: #ffffff;
     --footer-bg: #0f1115;
     --gradient-primary: linear-gradient(90deg, #7ddd6d, #ff00ea);
+    font-weight: bolder;
 }
 
 body {
     background-color: var(--bg-dark);
     color: var(--text-white);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Orbitron", sans-serif; 
     margin: 0;
     overflow-x: hidden;
     display: flex;
@@ -113,6 +116,7 @@ body {
     border: none;
     cursor: pointer;
     transition: color 0.3s;
+    font-family: "Orbitron", sans-serif; 
 }
 
 .nav-links li:hover .dropbtn {
@@ -170,7 +174,37 @@ body {
     transition: transform 0.5s ease;
     overflow: hidden;
 }
+.card {
+      /* Optional: add a small neon glow shadow at the base */
+    filter: drop-shadow(0 0 10px rgba(57, 255, 20, 0.3));
+}
+.game-section-container {
+    position: relative;
+    padding-bottom: 100px; 
+    perspective: 1000px; 
+    overflow: hidden;
+}
 
+/* The Floor Effect */
+.game-section-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotateX(60deg); /* Tilts the plane to look like a floor */
+    width: 200%; /* Make it wide to cover edges */
+    height: 400px;
+    z-index: -1;
+    
+    /* This creates the grid line effect */
+    background-image: 
+        linear-gradient(rgba(57, 255, 20, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(57, 255, 20, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    
+    /* Adds the glowing fade out effect toward the back */
+    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+}
 .wam {
     width: 250px;
     height: 190px;
@@ -287,6 +321,7 @@ body {
     cursor: pointer;
     box-shadow: 0 0 15px var(--accent-green);
     transition: transform 0.2s;
+    font-family: "Orbitron", sans-serif; 
 }
 
 .join-btn:hover {

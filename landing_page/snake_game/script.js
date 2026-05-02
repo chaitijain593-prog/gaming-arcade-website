@@ -10,7 +10,8 @@ let velocityX = 0, velocityY = 0;
 let setIntervalId;
 let score = 0;
 
-let highScore = localStorage.getItem("high-score") || 0;
+let highScore = parseInt(localStorage.getItem("high-score")) || 0;
+highScoreBoard.innerText = `High Score: ${highScore}`;
 
 const changeFoodPosition = () => {
     //Passing random 0-30 value as food position
@@ -32,7 +33,7 @@ const changeDirection = (e) => {
         velocityY = -1;
     }
     else if(e.key === "ArrowDown" && velocityY != -1){
-        velocityX = 0;0
+        velocityX = 0;
         velocityY = 1;
     }
     else if(e.key === "ArrowLeft" && velocityX != 1){
@@ -74,9 +75,9 @@ const initGame = () => {
     snakeY+=velocityY;
 
     //Checking if the snake's head is out of the wall, if so, setting gameOver to true
-    if(snakeX<=0 || snakeX >=30 || snakeY<=0 || snakeY>=30){
-        gameOver = true;
-    }
+   if(snakeX <= 0 || snakeX > 30 || snakeY <= 0 || snakeY > 30) {
+    gameOver = true;
+}
 
     // Render snake
     for(let i = 0; i < snakeBody.length; i++){

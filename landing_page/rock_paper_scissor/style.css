@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Orbitron", sans-serif; 
 }
 body{
     height: 100vh;
@@ -13,16 +13,19 @@ body{
     align-items: center;
     justify-content: center;
     background: #0f1115;
-}
+    color: #39FF14;
+    }
 .h1{
-    color: #fff;
+    color: #39FF14;
     padding: 50px;
 }
 .container{
     padding: 2rem 7rem;
-    background: linear-gradient(90deg, #7ddd6d, #ff00ea);
+    background-color:black;
+    color: #39FF14;
     border-radius: 14px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(57, 255, 20, 0.2);
+    box-shadow: 0 0 15px #39FF14;
 }
 .result_images{
     display: flex;
@@ -55,7 +58,7 @@ body{
 .result{
     text-align: center;
     font-size: 2rem;
-    color: #0f1115;
+    color: #39FF14;
     margin-top: 1.5rem;
 }
 .option_image img{
@@ -78,7 +81,7 @@ body{
     opacity: 0.5;
     transition: opacity 0.5s ease;
     cursor: pointer;
-    color: #0f1115;
+    color: #39FF14;
 }
 .option_image:hover{
     opacity: 1;
@@ -87,7 +90,7 @@ body{
     opacity: 1;
 }
 .option_image p{
-    color: darkslategray;
+    color: #39FF14;
     font-size: 1.235rem;
     margin-top: 1rem;
     pointer-events: none;

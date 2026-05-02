@@ -31,9 +31,6 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add("flipped");
-    // Show the symbol when clicked
-    this.textContent = this.getAttribute("data-symbol"); 
-
     if (!firstCard) {
         firstCard = this;
         return;
@@ -58,17 +55,16 @@ function disableCards(){
 
     }
 }
-function unflipCards(){
+function unflipCards() {
     lives--;
     livesDisplay.textContent = `Lives: ${lives}`;
-   setTimeout(() => {
-    firstCard.classList.remove("flipped");
-    firstCard.textContent = "";
-    secondCard.classList.remove("flipped");
-    secondCard.textContent = "";
-    resetBoard();
-   }, 1000);
-    if(lives === 0){
+    setTimeout(() => {
+        firstCard.classList.remove("flipped");
+        secondCard.classList.remove("flipped");
+        resetBoard();
+    }, 1000);
+    
+    if (lives === 0) {
         endgame(false);
     }
 }
